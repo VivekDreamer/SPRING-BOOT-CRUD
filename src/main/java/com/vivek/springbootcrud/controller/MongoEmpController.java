@@ -12,11 +12,11 @@ import com.vivek.springbootcrud.service.MongoEmpService;
 
 @RestController
 public class MongoEmpController {
-    @Autowired
-    private MongoEmpService service;
+    // @Autowired
+    // private MongoEmpService service;
 
-    @PostMapping
-    public ResponseEntity<MongoEmployee> saveOrUpdate(@RequestBody MongoEmployee emp){
-        return new ResponseEntity<MongoEmployee>(service.saveOrUpdate(emp),  HttpStatus.ACCEPTED);
-    }
+    // @PostMapping
+    // public ResponseEntity<MongoEmployee> saveOrUpdate(@RequestBody MongoEmployee emp){
+    //     return new ResponseEntity<MongoEmployee>(service.saveOrUpdate(emp),  HttpStatus.ACCEPTED);
+    // }
 }
