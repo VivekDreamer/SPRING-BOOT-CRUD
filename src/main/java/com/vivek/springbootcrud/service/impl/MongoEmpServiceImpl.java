@@ -10,10 +10,13 @@ import com.vivek.springbootcrud.service.MongoEmpService;
 @Service
 public class MongoEmpServiceImpl implements MongoEmpService {
 
-    @Autowired
-    private MongoEmpRepo repo;
-    @Override
-    public MongoEmployee saveOrUpdate(MongoEmployee emp) {
-        return repo.save(emp);
-    }
+     @Autowired
+     private MongoEmpRepo repo;
+
+     @Override
+     public MongoEmployee saveOrUpdate(MongoEmployee emp) {
+        return emp;
+    //     return repo.save(emp);
+    
+     }
 }
