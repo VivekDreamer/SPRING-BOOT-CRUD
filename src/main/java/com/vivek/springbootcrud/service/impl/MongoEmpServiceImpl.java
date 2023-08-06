@@ -1,5 +1,7 @@
 package com.vivek.springbootcrud.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,4 +19,9 @@ public class MongoEmpServiceImpl implements MongoEmpService {
      public MongoEmployee saveOrUpdate(MongoEmployee emp) {
         return repo.save(emp);
      }
+
+    @Override
+    public List<MongoEmployee> getAllEmp() {
+        return repo.findAll();
+    }
 }
