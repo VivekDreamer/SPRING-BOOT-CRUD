@@ -26,7 +26,7 @@ public class SecurityConfig {
         http.csrf( csrf -> csrf.disable())
         .cors( cors -> cors.disable())
         .authorizeHttpRequests(auth -> auth.requestMatchers("/home/**")
-        .authenticated().requestMatchers("/auth/login").permitAll().requestMatchers("/mongo/*").permitAll().anyRequest().authenticated())
+        .authenticated().requestMatchers("/auth/login").permitAll().requestMatchers("/mongo/**").permitAll().anyRequest().authenticated())
         .exceptionHandling(ex -> ex.authenticationEntryPoint(point))
         .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class);
